@@ -143,7 +143,7 @@ body {
     const merchant_code = urlParams.get('merchant_code');
     const check_sum = urlParams.get('check_sum');
 	if (subId) {
-		$('#mastercard-platinum').attr('src', 'https://ocb-bav.dangkymothe.com/?transId=' + transId +'&subId=' + subId + '&merchant_code=DAGORAS08&check_sum=' + encodeURIComponent(check_sum));
+		$('#mastercard-platinum').attr('src', 'https://ocb-bav.dangkymothe.com/?transId=' + transId +'&subId=' + subId + '&merchant_code=DAGORAS09&check_sum=' + encodeURIComponent(check_sum));
 	} else {
 		$('#mastercard-platinum').attr('src', 'https://ocb-bav.dangkymothe.com');
 	}
@@ -160,7 +160,7 @@ body {
 		var tab2Src = $('#mastercard-lifestyle').attr('src');
 		if(tab2Src === '') {
 			if (subId) {
-				$('#mastercard-lifestyle').attr('src', 'https://ocb-mastercard-lifestyle.dangkymothe.com/?transId=' + transId +'&subId=' + subId + '&merchant_code=DAGORAS08&check_sum=' + encodeURIComponent(check_sum));
+				$('#mastercard-lifestyle').attr('src', 'https://ocb-mastercard-lifestyle.dangkymothe.com/?transId=' + transId +'&subId=' + subId + '&merchant_code=DAGORAS09&check_sum=' + encodeURIComponent(check_sum));
 			} else {
 				$('#mastercard-lifestyle').attr('src', 'https://ocb-mastercard-lifestyle.dangkymothe.com');
 			}
