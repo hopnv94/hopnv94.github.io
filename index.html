@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <script>
+	window.ladi_viewport = function () {var width = window.outerWidth > 0 ? window.outerWidth : window.screen.width;var widthDevice = width;var is_desktop = width >= 768;var content = "";if (typeof window.ladi_is_desktop == "undefined" || window.ladi_is_desktop == undefined) {window.ladi_is_desktop = is_desktop;}if (!is_desktop) {widthDevice = 420;} else {widthDevice = 1200;}content = "width=" + widthDevice + ", user-scalable=no";var scale = 1;if (!is_desktop && widthDevice != window.screen.width && window.screen.width > 0) {scale = window.screen.width / widthDevice;}if (scale != 1) {content += ", initial-scale=" + scale + ", minimum-scale=" + scale + ", maximum-scale=" + scale;}var docViewport = document.getElementById("viewport");if (!docViewport) {docViewport = document.createElement("meta");docViewport.setAttribute("id", "viewport");docViewport.setAttribute("name", "viewport");document.head.appendChild(docViewport);}docViewport.setAttribute("content", content);};window.ladi_viewport();window.ladi_fbq_data = [];window.ladi_fbq = function (track_name, conversion_name, data, event_data) {window.ladi_fbq_data.push([track_name, conversion_name, data, event_data]);};
+	</script>
+<style>
+body {
+  margin: 0;
+  background: #f5f5f5;
+  font-family: "Poppins", sans-serif;
+  line-height: 2em;
+  overflow: hidden;
+}
+
+.wrapper {
+  margin: auto;
+}
+
+.tab-wrapper {
+  text-align: center;
+  display: block;
+  margin: auto;
+}
+
+.tabs {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  background: #000c44;
+}
+
+.tab-link {
+  width: 50%;
+  margin: 0 1%;
+  list-style: none;
+  padding: 10px;
+  color: #fff;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all ease 0.5s;
+  border-bottom: solid 3px rgba(255, 255, 255, 0);
+  letter-spacing: 1px;
+  font-size: 14px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+}
+
+.tab-link svg {
+	width: 40px;
+	height: 40px;
+}
+
+.tab-link:hover {
+  color: #999;
+  border-color: #999;
+}
+
+.tab-link.active {
+  color: #333;
+  border-color: #333;
+}
+
+.tab-link:nth-of-type(1).active {
+  color: #fff700;
+  border-color: #fff700;
+}
+
+.tab-link:nth-of-type(2).active {
+  color: #fff700;
+  border-color: #fff700;
+}
+
+.tab-link:nth-of-type(3).active {
+  color: #EEC63B;
+  border-color: #EEC63B;
+}
+
+.content-wrapper {
+  
+}
+
+.tab-content {
+  display: none;
+  text-align: center;
+  color: #888;
+  font-weight: 300;
+  font-size: 15px;
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeIn 0.5s ease 1 forwards;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+    transform: none;
+  }
+}
+</style>
+</head>
+<body>
+  
+  <div class="wrapper">
+		
+	<div class="tab-wrapper">
+		<ul class="tabs">
+				<li class="tab-link active" data-tab="1">
+				<svg id="Layer_1" enable-background="new 0 0 512 512" height="512" viewBox="0 0 512 512" width="512" xmlns="http://www.w3.org/2000/svg"><g><g><g><path d="m264 16h-32c-70.692 0-128 57.307-128 128 0 55.73 35.621 103.133 85.333 120.706v39.294h-10.374c-6.053 0-10.959 4.907-10.959 10.959 0 3.199 1.398 6.239 3.827 8.321l46.099 39.513c3.92 3.36 8.912 5.206 14.074 5.206h32c5.162 0 10.154-1.847 14.074-5.206l46.099-39.513c2.429-2.082 3.827-5.122 3.827-8.321 0-6.053-4.907-10.959-10.959-10.959h-10.374v-39.294c49.712-17.572 85.333-64.975 85.333-120.706 0-70.693-57.307-128-128-128z" fill="#cd3232"/></g><g><path d="m360 144c0-70.692-57.308-128-128-128s-128 57.308-128 128c0 55.73 35.621 103.134 85.333 120.706v39.294h-10.374c-6.053 0-10.959 4.907-10.959 10.959 0 3.199 1.398 6.239 3.827 8.321l46.099 39.513c3.92 3.36 8.912 5.206 14.074 5.206s10.154-1.847 14.074-5.206l46.099-39.513c2.429-2.082 3.827-5.122 3.827-8.321 0-6.053-4.907-10.959-10.959-10.959h-10.374v-39.294c49.712-17.572 85.333-64.976 85.333-120.706z" fill="#ff4646"/></g><g><circle cx="232" cy="144" fill="#cd3232" r="96"/></g><path d="m264 132c6.627 0 12-5.373 12-12v-1.538c0-18.174-14.143-33.097-32-34.365v-12.097c0-6.627-5.373-12-12-12s-12 5.373-12 12v12.098c-17.857 1.268-32 16.191-32 34.365 0 15.843 10.734 29.591 26.104 33.433l29.971 7.493c4.666 1.167 7.925 5.34 7.925 10.15 0 5.769-4.693 10.462-10.462 10.462h-19.076c-5.769 0-10.462-4.693-10.462-10.462v-1.539c0-6.627-5.373-12-12-12s-12 5.373-12 12v1.538c0 18.174 14.143 33.097 32 34.365v12.097c0 6.627 5.373 12 12 12s12-5.373 12-12v-12.098c17.857-1.268 32-16.191 32-34.365 0-15.843-10.734-29.591-26.104-33.433l-29.971-7.493c-4.666-1.167-7.925-5.34-7.925-10.15 0-5.769 4.693-10.462 10.462-10.462h19.076c5.769 0 10.462 4.693 10.462 10.462v1.539c0 6.627 5.373 12 12 12z" fill="#e6e6eb"/></g><g><path d="m256 384h-68.118c-12.73 0-24.939 5.057-33.941 14.059l-17.941 17.941 40 40 19.314-19.314c3.001-3.001 7.07-4.686 11.314-4.686h49.372c13.255 0 24-10.745 24-24 0-13.255-10.745-24-24-24z" fill="#fbb993"/></g><g><path d="m371.313 372.686c-6.248-6.249-16.379-6.249-22.627 0l-59.313 59.314h-82.745c-4.243 0-8.313 1.686-11.314 4.686l-19.314 19.314 24 24 16-16h76.687c6.411 0 12.438-2.497 16.97-7.03l61.657-61.657c6.248-6.248 6.248-16.378-.001-22.627z" fill="#f1905b"/></g><g><path d="m256 421.333h-5.333c-4.418 0-8-3.582-8-8v-10.667c0-4.418 3.582-8 8-8h5.333c7.364 0 13.333 5.97 13.333 13.333 0 7.365-5.969 13.334-13.333 13.334z" fill="#f1905b"/></g><g><path d="m133.657 413.657 42.343 42.343-40 40h-96l82.343-82.343c3.124-3.124 8.19-3.124 11.314 0z" fill="#463c4b"/></g><g><path d="m176 456 26.343 26.343c3.124 3.124 3.124 8.19 0 11.314l-2.343 2.343h-64z" fill="#32283c"/></g><g><g><circle cx="392" cy="144" fill="#e6e6eb" r="72"/></g><g><path d="m392 80c35.29 0 64 28.71 64 64s-28.71 64-64 64-64-28.71-64-64 28.71-64 64-64m0-16c-44.183 0-80 35.817-80 80s35.817 80 80 80 80-35.817 80-80-35.817-80-80-80z" fill="#463c4b"/></g></g><g><path d="m381.333 178.667c-2.047 0-4.095-.781-5.657-2.343l-24-24c-3.125-3.124-3.125-8.189 0-11.313 3.124-3.125 8.189-3.125 11.313 0l18.343 18.343 42.343-42.343c3.124-3.125 8.189-3.125 11.313 0 3.125 3.124 3.125 8.189 0 11.313l-48 48c-1.56 1.562-3.607 2.343-5.655 2.343z" fill="#ff4646"/></g></g></svg>
+				Thẻ Platinum Cashback</li>
+				<li class="tab-link" data-tab="2">
+				<svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve"> <path style="fill:#FFFFFF;" d="M512,402.281c0,16.716-13.55,30.267-30.265,30.267H30.265C13.55,432.549,0,418.997,0,402.281V109.717 c0-16.716,13.55-30.266,30.265-30.266h451.47c16.716,0,30.265,13.551,30.265,30.266V402.281L512,402.281z"/> <path style="fill:#F79F1A;" d="M113.64,258.035l-12.022-57.671c-2.055-7.953-8.035-10.319-15.507-10.632H30.993l-0.491,2.635 C73.431,202.774,101.836,227.88,113.64,258.035z"/> <g> <polygon style="fill:#059BBF;" points="241.354,190.892 205.741,190.892 183.499,321.419 219.053,321.419 "/> <path style="fill:#059BBF;" d="M135.345,321.288l56.01-130.307h-37.691l-34.843,89.028l-3.719-13.442 c-6.83-16.171-26.35-39.446-49.266-54.098l31.85,108.863L135.345,321.288z"/> <path style="fill:#059BBF;" d="M342.931,278.75c0.132-14.819-9.383-26.122-29.887-35.458c-12.461-6.03-20.056-10.051-19.965-16.17 c0-5.406,6.432-11.213,20.368-11.213c11.661-0.179,20.057,2.367,26.624,5.003l3.218,1.475l4.826-28.277 c-7.059-2.637-18.094-5.451-31.895-5.451c-35.157,0-59.904,17.691-60.128,43.064c-0.224,18.763,17.692,29.216,31.181,35.469 c13.847,6.374,18.493,10.453,18.404,16.171c-0.089,8.743-11.035,12.73-21.264,12.73c-14.25,0-21.8-1.965-33.509-6.843l-4.55-2.09 l-4.998,29.249c8.303,3.629,23.668,6.801,39.618,6.933C318.361,323.342,342.663,305.876,342.931,278.75z"/> <path style="fill:#059BBF;" d="M385.233,301.855c4.065,0,40.382,0.045,45.566,0.045c1.072,4.545,4.333,19.565,4.333,19.565h33.011 L439.33,191.027h-27.472c-8.533,0-14.874,2.323-18.628,10.809l-52.845,119.629h37.392 C377.774,321.465,383.848,305.386,385.233,301.855z M409.622,238.645c-0.176,0.357,2.95-7.549,4.737-12.463l2.411,11.256 c0,0,6.792,31.182,8.22,37.704h-29.528C398.411,267.638,409.622,238.645,409.622,238.645z"/> <path style="fill:#059BBF;" d="M481.735,79.451H30.265C13.55,79.451,0,93.001,0,109.717v31.412h512v-31.412 C512,93.001,498.451,79.451,481.735,79.451z"/> </g> <path style="fill:#F79F1A;" d="M481.735,432.549H30.265C13.55,432.549,0,418.998,0,402.283v-31.412h512v31.412 C512,418.998,498.451,432.549,481.735,432.549z"/> <path style="opacity:0.15;fill:#202121;enable-background:new ;" d="M21.517,402.281V109.717 c0-16.716,13.551-30.266,30.267-30.266h-21.52C13.55,79.451,0,93.001,0,109.717v292.565c0,16.716,13.55,30.267,30.265,30.267h21.52 C35.069,432.549,21.517,418.997,21.517,402.281z"/> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> <g> </g> </svg> 
+				Thẻ Platinum</li>
+		</ul>
+	</div>
+
+	<div class="content-wrapper">
+
+		<div id="tab-1" class="tab-content active">
+		    <iframe src="" id="platinum-cashback" width="100%" height="700px" style="overflow:hidden;width:100%"></iframe>
+		</div>
+
+		<div id="tab-2" class="tab-content">
+			<iframe src="" id="platinum" width="100%" height="700px" style="overflow:hidden;width:100%"></iframe>
+		</div>
+	</div>
+	
+</div>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<script>
+
+	const queryString = window.location.search;
+    const urlParams = new URLSearchParams(queryString);
+    const transId = urlParams.get('transId');
+    const subId = urlParams.get('subId');
+    const merchant_code = urlParams.get('merchant_code');
+    const check_sum = urlParams.get('check_sum');
+	$('#platinum-cashback').attr('src', 'http://sacombank-platinum-cashback.dangkymothe.com?transId=' + transId +'&subId=' + subId + '&merchant_code=DAGORAS08&check_sum=' + encodeURIComponent(check_sum));
+	
+	$('.tab-link').click( function() {
+	
+	var tabID = $(this).attr('data-tab');
+	
+	$(this).addClass('active').siblings().removeClass('active');
+	
+	$('#tab-'+tabID).addClass('active').siblings().removeClass('active');
+	
+	if (tabID === '2') {
+		var tab2Src = $('#platinum').attr('src');
+		if(tab2Src === '') {
+			$('#platinum').attr('src', 'http://sacombank-platinum.dangkymothe.com?transId=' + transId +'&subId=' + subId + '&merchant_code=DAGORAS08&check_sum=' + encodeURIComponent(check_sum));
+		}
+	}
+});
+</script>
+</body>
+</html>
